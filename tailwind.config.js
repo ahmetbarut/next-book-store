@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme  = require("tailwindcss/defaultTheme")
+const plugin = require("tailwindcss/plugin")
+const colors = require('tailwindcss/colors')
+
 module.exports = {
+  darkMode: 'class',
+  coffeeMode: 'class',
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -10,6 +15,15 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    coffeeMode: {
+      colors: {
+        ...colors,
+      },
+      backgroundColors: {
+        ...colors,
+      }
+    },
+    themeVariants : ['coffee', 'user'],
     extend: {
       colors: {
         primary: {
@@ -35,5 +49,14 @@ module.exports = {
       ],
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addVariant }) {
+      addVariant('coffee', function({ container, separator }) {
+        container.walkRules(rule => {
+          rule.selector = `.coffee * ${rule.selector}`
+        })
+      }
+    )
+    })
+  ],
 }

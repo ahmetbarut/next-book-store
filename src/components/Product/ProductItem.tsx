@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function ProductItem(
-    { image }: { image: string }
+    { image }: { image: string },
 ) {
     return (
         <div className="flex flex-col justify-between items-center hover:cursor-pointer group relative">
@@ -9,7 +9,7 @@ export default function ProductItem(
                 <div className="shadow-lg p-4">
                     <Image src={image} alt="img" width={1000} height={1000} />
                 </div>
-                <div className="flex items-center justify-between mt-5 flex-col w-full h-24">
+                <div className="">
                     <h1 className="text-primary text-xl font-medium">
                         Lorem Ipsum Ve Yazılım
                     </h1>

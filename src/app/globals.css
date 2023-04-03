@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base{
+    html:has(.coffe){
+        @apply bg-gray-200 !important;
+    }
+}
+
 @layer components{
     .active-slider{
         @apply border border-red-600 !important;

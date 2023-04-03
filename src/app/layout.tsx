@@ -1,6 +1,8 @@
+import Footer from '@/components/Footer/Footer'
 import './globals.css'
 import Header from '@/components/Head/Header'
 import TopCategories from '@/components/Home/TopCategories'
+import Articles from '@/components/Main/Articles'
 import Newsletter from '@/components/Main/Newsletter'
 import RelatedProducts from '@/components/Main/RelatedProducts'
 import Slider from '@/components/Slider/Slider'
@@ -25,6 +27,8 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
         <TopCategories />
         <Newsletter />
         <RelatedProducts />
+        <Articles />
+        <Footer />
         {children}
       </body>
     </html>
