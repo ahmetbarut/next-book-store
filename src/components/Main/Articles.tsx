@@ -10,19 +10,19 @@ export default function Articles() {
             slug: "lorem-ipsum-dolor",
         },
         {
-            id: 1,
+            id: 2,
             image: "/images/article.jpg",
             title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
             slug: "lorem-ipsum-dolor",
         },
         {
-            id: 1,
+            id: 3,
             image: "/images/article.jpg",
             title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
             slug: "lorem-ipsum-dolor",
         },
         {
-            id: 1,
+            id: 4,
             image: "/images/article.jpg",
             title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
             slug: "lorem-ipsum-dolor",
@@ -35,22 +35,22 @@ export default function Articles() {
                 <h3 className="text-center uppercase text-zinc-400 text-xs">
                     Read Our Articles
                 </h3>
-                <div className="flex items-center">
-                    <div className="h-px bg-gray-300 flex-1 mr-3"></div>
-                    <div className="text-primary text-4xl font-bold uppercase">New Relase Books</div>
-                    <div className="h-px bg-gray-300 flex-1 ml-3"></div>
+                <div className="flex md:items-center">
+                    <div className="h-px bg-gray-300 flex-1 mr-3 hidden md:block"></div>
+                    <div className="text-primary w-full md:w-auto md:text-4xl text-2xl text-center md:text-left font-bold uppercase">New Relase Books</div>
+                    <div className="h-px bg-gray-300 flex-1 ml-3 hidden md:block"></div>
                 </div>
                 {/* Articles */}
                 <div className="mb-4">
-                    <div className="grid grid-cols-4 grid-flow-row gap-4 mt-12">
+                    <div className="grid md:grid-cols-4 grid-flow-row gap-4 mt-12">
                         {articles.map((article) => (
-                            <ArticleItem article={article}  key={article.id}/>
+                            <ArticleItem article={article}  key={article.id + Math.random()}/>
                         ))}
                     </div>
                 </div>
 
                 <div className="flex justify-center mt-12">
-                    <button className="uppercase bg-transparent text-primary-900 border border-primary-900/70 w-2/12 text-sm font-light py-2 px-4 rounded-sm">
+                    <button className="uppercase bg-transparent text-primary-900 border border-primary-900/70 md:w-2/12 w-full text-sm font-light py-2 px-4 rounded-sm">
                         View All
                     </button>
                 </div>

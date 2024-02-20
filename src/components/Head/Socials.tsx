@@ -5,7 +5,7 @@ import TwitterIcon from "../Icons/TwitterIcon";
 
 export default function Socials() {
     return (
-        <div className="flex items-center justify-evenly ml-auto w-1/5">
+        <div className="flex items-center md:justify-evenly ml-auto md:w-1/5 w-1/3">
             <a href="https://www.instagram.com/">
                 <Instagram className="h-4 w-4 text-white mr-2" />
             </a>

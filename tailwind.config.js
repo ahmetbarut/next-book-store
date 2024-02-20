@@ -2,17 +2,18 @@
 const defaultTheme  = require("tailwindcss/defaultTheme")
 const plugin = require("tailwindcss/plugin")
 const colors = require('tailwindcss/colors')
+const {nextui} = require("@nextui-org/react");
 
 module.exports = {
   darkMode: 'class',
   coffeeMode: 'class',
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./page/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
+    // Or if using `src` directory:
   ],
   theme: {
     coffeeMode: {
@@ -50,6 +51,7 @@ module.exports = {
     },
   },
   plugins: [
+    nextui(),
     plugin(function({ addVariant }) {
       addVariant('coffee', function({ container, separator }) {
         container.walkRules(rule => {

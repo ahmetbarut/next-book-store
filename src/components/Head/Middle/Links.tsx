@@ -10,7 +10,7 @@ export default function Links({ className }: { className?: string }) {
                 <span className="mr-2">
                     <UserIcon className="h-4 w-4" />
                 </span>
-                <span className="uppercase">
+                <span className="md:uppercase">
                     Account
                 </span>
             </a>
@@ -18,7 +18,7 @@ export default function Links({ className }: { className?: string }) {
                 <span className="mr-2">
                     <CartIcon className="h-4 w-4" />
                 </span>
-                <span className="uppercase">
+                <span className="md:uppercase">
                     Cart
                 </span>
             </a>
@@ -26,7 +26,7 @@ export default function Links({ className }: { className?: string }) {
                 <span className="mr-2">
                     <HeartIcon className="h-4 w-4" />
                 </span>
-                <span className="uppercase">
+                <span className="md:uppercase">
                     Wishlist
                 </span>
             </a>

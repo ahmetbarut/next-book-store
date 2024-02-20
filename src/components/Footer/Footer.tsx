@@ -8,14 +8,14 @@ export default function Footer() {
     return (
         <footer className="bg-white mx-auto divide-y mb-4 flex justify-center">
             <div className="w-11/12">
-                <div className="flex justify-between">
-                    <div className="w-1/4">
-                        <div className="flex flex-col">
+                <div className="flex md:flex-row flex-col justify-between">
+                    <div className="md:w-1/4 w-full">
+                        <div className="flex flex-col items-center mt-4 justify-center">
                             <Logo />
-                            <p className="mt-2 text-gray-500 font-light">
+                            <p className="mt-2 text-gray-500 font-light text-center">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ea
                             </p>
-                            <div className="flex justify-between mt-5">
+                            <div className="flex md:justify-between gap-5 justify-center md:gap-0 mt-5">
                                 <div className="bg-primary-500 w-9 h-9 rounded-full p-2 ">
                                     <FacebookIcon bgFill="white" className="" height="20" width="20" />
                                 </div>
@@ -28,12 +28,12 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-auto">
-                        <div className="flex flex-col">
-                            <h1 className="text-primary-500 font-semibold uppercase">
-                                Company
+                    <div className="md:w-auto md:mt-0 mt-5 w-full">
+                        <div className="flex flex-col md:gap-0 gap-5">
+                            <h1 className="text-primary-500 md:text-base text-4xl text-center md:text-left font-semibold uppercase">
+                                BrandBook
                             </h1>
-                            <div className="flex flex-col">
+                            <div className="flex flex-col w-full items-center justify-center">
                                 <a href="#" className="text-gray-500 uppercase font-light mt-2">
                                     Home
                                 </a>
@@ -58,19 +58,21 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-1/3">
+                    <div className="md:w-1/3 w-full">
                         <div className="flex flex-col">
-                            <h1 className="text-primary-500 font-semibold uppercase">
-                                Latest News
+                            <h1 className="text-primary-500 md:text-base text-center md:text-left text-2xl font-semibold uppercase">
+                                Son Haberler
                             </h1>
-                            <div className="flex flex-col mt-2 gap-2">
-                                <div className="flex flex-row gap-1">
-                                    <div className="w-1/3">
-                                        <Image src="/images/article.jpg" width="100" className="rounded" height="100" alt="a" />
+                            <div className="md:flex md:flex-col grid grid-cols-2 mt-2 gap-2">
+                                <div className="flex md:flex-row flex-col gap-1">
+                                    <div className="md:w-1/3 w-full">
+                                        <Image src="/images/article.jpg" width="100" className="rounded"
+                                               height="100" alt="a"/>
                                     </div>
-                                    <div className="w-2/3">
-                                        <a href="#" className="text-gray-500 uppercase font-light mt-2 flex flex-col justify-between h-full">
-                                            <h1 className="text-xs font-medium text-primary-500">
+                                    <div className="md:w-2/3 w-full">
+                                        <a href="#"
+                                           className="text-gray-500 uppercase font-light mt-2 flex flex-col justify-between h-full">
+                                            <h1 className="md:text-xs font-medium text-primary-500">
                                                 Lorem ipsum dolor sit amet
                                             </h1>
                                             <p className="text-[10px] mb-2">
@@ -79,13 +81,15 @@ export default function Footer() {
                                         </a>
                                     </div>
                                 </div>
-                                <div className="flex flex-row gap-1">
-                                    <div className="w-1/3">
-                                        <Image src="/images/article.jpg" width="100" className="rounded" height="100" alt="a" />
+                                <div className="flex md:flex-row flex-col gap-1">
+                                    <div className="md:w-1/3 w-full">
+                                        <Image src="/images/article.jpg" width="100" className="rounded"
+                                               height="100" alt="a"/>
                                     </div>
-                                    <div className="w-2/3">
-                                        <a href="#" className="text-gray-500 uppercase font-light mt-2 flex flex-col justify-between h-full">
-                                            <h1 className="text-xs font-medium text-primary-500">
+                                    <div className="md:w-2/3 w-full">
+                                        <a href="#"
+                                           className="text-gray-500 uppercase font-light mt-2 flex flex-col justify-between h-full">
+                                            <h1 className="md:text-xs font-medium text-primary-500">
                                                 Lorem ipsum dolor sit amet
                                             </h1>
                                             <p className="text-[10px] mb-2">

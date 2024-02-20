@@ -1,15 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProductItem(
     { image }: { image: string },
 ) {
     return (
-        <div className="flex flex-col justify-between items-center hover:cursor-pointer group relative">
-            <div className="rounded-md">
+        <div className="flex flex-col gap-5 justify-between items-center hover:cursor-pointer group relative">
+            <Link href="/product/test" className="rounded-md flex gap-5 flex-col">
                 <div className="shadow-lg p-4">
                     <Image src={image} alt="img" width={1000} height={1000} />
                 </div>
-                <div className="">
+                <div className="md:w-full flex flex-col items-center justify-center">
                     <h1 className="text-primary text-xl font-medium">
                         Lorem Ipsum Ve Yazılım
                     </h1>
@@ -20,9 +21,9 @@ export default function ProductItem(
                         $ 100
                     </h2>
                 </div>
-            </div>
-            <button className="uppercase absolute group-hover:block font-xl bg-primary-500/80 hover:bg-primary-500 text-white h-12 w-10/12 group-hover:bottom-[40%] bottom-0
-            group-hover:opacity-100 opacity-0 rounded-md hover:transition duration-500
+            </Link>
+            <button className="uppercase md:absolute group-hover:block font-xl bg-primary-500 md:bg-primary-500/80 hover:bg-primary-500 text-white md:h-12 h-8 p-1 md:p-0 text-xs md:w-10/12 w-2/3 group-hover:bottom-[40%] bottom-0
+            group-hover:opacity-100 md:opacity-0 rounded-md hover:transition duration-500
             ">
                 Add To Cart
             </button>
